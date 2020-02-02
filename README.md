@@ -53,10 +53,10 @@ there are some file and directory on root directory that I want to explain what 
     4. **layout**: you should put your layout components in this folder.
 
 #### Debug
-you should open your project on vscode . go to vscode's debug tab in the left of window. on top od screen there is a green play button and a select box . click on select box and choose **Node Inspector** then click on green play button . set breakpoint on a line in vscode and open your project in browser on **localhost:3000**.first your codee run on server side that is why vscode have to stop your proccess on breakpoint.
+you should open your project on vscode . go to vscode's debug tab in the left of window. on top of screen there is a green play button and a select box . click on select box and choose **Node Inspector** then click on green play button . set breakpoint on a line in vscode and open your project in browser on **localhost:3000**.first your codee run on server side that is why vscode have to stop your proccess on breakpoint.
 
 #### Eslint Vscode
-for work eslint in your editor follow these steps:
+for linting eslint in your editor follow these steps:
   1. go to **settings** in vscode in bottom left corner of it.
   2. put below code in **setting.json** :
 ```
