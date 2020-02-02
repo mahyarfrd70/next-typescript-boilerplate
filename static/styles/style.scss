@@ -1,0 +1,11 @@
+@import "./colors";
+@import "./fonts";
+
+body{
+    direction: rtl;
+    font-family: IRANSans;
+}
+
+div{
+    color: $red;
+}

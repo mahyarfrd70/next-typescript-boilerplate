@@ -1,0 +1,41 @@
+{
+    "env": {
+        "browser": true,
+        "node": true,
+        "jest": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended",
+        "plugin:react/recommended",
+        "prettier",
+        "prettier/@typescript-eslint"
+    ],
+    "plugins": ["@typescript-eslint", "react", "eslint-plugin-react"],
+    "overrides": [
+        {
+            "files": ["*.ts", "*.tsx"],
+            "rules": {
+                "@typescript-eslint/no-var-requires": 2
+            }
+        }
+    ],
+    "rules": {
+        "no-const-assign": 2,
+        "@typescript-eslint/no-var-requires": "off",
+        "@typescript-eslint/explicit-function-return-type": 0,
+        "no-debugger": 0,
+        "@typescript-eslint/no-explicit-any":0,
+        "@typescript-eslint/no-empty-function": 0
+    },
+    "ignorePatterns": ["__test__/", "node_modules/"],
+    "settings": {
+        "react": {
+            "createClass": "createReactClass",
+            "pragma": "React",
+            "version": "detect"
+        }
+    }
+}

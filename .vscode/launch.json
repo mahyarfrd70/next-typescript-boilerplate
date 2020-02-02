@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Node Inspector",
+        "type": "node",
+        "request": "launch",
+        "args": ["${workspaceRoot}/server.js"],
+        "cwd": "${workspaceRoot}",
+        "outFiles": ["${workspaceFolder}/dist/src/**/*.js", "${workspaceFolder}/.next/**/*.js"],
+        "protocol": "inspector",
+        "internalConsoleOptions": "openOnSessionStart",
+        "sourceMaps": true,
+        "autoAttachChildProcesses": true,
+      }
+    ]
+}
+

@@ -1,0 +1,13 @@
+version: "3.5"
+
+services: 
+    node: 
+        volumes: 
+            - ./pages:/shop/pages
+            - ./static:/shop/static
+            - ./src:/shop/src 
+            - ./next.config.js:/shop/next.config.js 
+            - ./server.js:/shop/server.js 
+        ports: 
+            - 3000:3000
+        command: "npm run dev"
