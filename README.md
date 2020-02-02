@@ -48,7 +48,7 @@ there are some file and directory on root directory that I want to explain what 
   - **__test__** is directory that you can put your test file in it.
   - **src** is a directory . there are some directory in it such as:
     1. **components:** you should put your components in this folder
-    2. **helpers:** you should put your components in this folder.also there are Service and Auth folder in it and Auth is a object that used for Authorization and Service is a object that use **axios** for call api.you can add another helper in this folder and use in project.
+    2. **helpers:** you should put your helpers in this folder.also there are Service and Auth folder in it and Auth is a object that used for Authorization and Service is a object that use **axios** for call api.you can add another helper in this folder and use in project.
     3. **redux:** you should put your reducers and actions in this folder. also there are **RootReducer** and **Store** in this directory.
     4. **layout**: you should put your layout components in this folder.
 
