@@ -12,13 +12,13 @@ this repository is a boilerplate for nextjs and typescript project . we've tried
   - Eslint
   - Prettier
 
-### How do you can run it?
+### How can you run it?
   - first you should clone it form repository.
   - open project on vscode and run ```npm install```
   - run ```npm run dev```for development mode
-  - open your browser and go to **localhost:3000**
+  - open **localhost:3000** on your browser
 
-**note:** for production mode first you should run ```npm run build``` next run ```npm start``` then open your project on **localhost:3000** in your browser.
+**note:** for production mode first you should run ```npm run build``` next run ```npm start``` then open **localhost:3000** on your browser.
 
 #### Run with Docker
 You can also run project with Docker.first you have to installed **Docker** and **Docker-Compose** on your system and then for run project with Docker in development mode run below command in command line:
@@ -26,7 +26,7 @@ You can also run project with Docker.first you have to installed **Docker** and 
     $ docker-compose build
     $ docker-compose up
 ```
-open your browser and go to **localhost:3000**. and for production mode you should run : 
+open **localhost:3000** on your browser. and for production mode you should run : 
 ```sh
     $ docker-compose -f docker-compose.yml -f docker-compose.prod.yml build
     $ docker-compose -f docker-compose.yml -f docker-compose.prod.yml up
@@ -35,7 +35,7 @@ and open **localhost:8081** on browser for production mode.
 
 ### File and Folder structure
 
-there are some file and directory on root directory that I want to explain what each one dose .
+there are some file and directory on root directory that I want to explain what each one does .
     
   - **server.js** is in root directory that is custom server for Nextjs.
   - **.eslintrc** and **.prettierrc** are in root directory that are for config Eslint and Prettier.
@@ -53,7 +53,7 @@ there are some file and directory on root directory that I want to explain what 
     4. **layout**: you should put your layout components in this folder.
 
 #### Debug
-you should open your project on vscode . go to vscode's debug tab in the left of window. on top of screen there is a green play button and a select box . click on select box and choose **Node Inspector** then click on green play button . set breakpoint on a line in vscode and open your project in browser on **localhost:3000**.first your codee run on server side that is why vscode have to stop your proccess on breakpoint.
+you should open your project on vscode . go to vscode's debug tab in the left of window. on top of screen there is a green play button and a select box . click on select box and choose **Node Inspector** then click on green play button . set breakpoint on a line in vscode and open **localhost:3000** on browser .first your code run on server side that is why vscode have to stop your proccess on breakpoint.
 
 #### Eslint Vscode
 for linting eslint in your editor follow these steps:
