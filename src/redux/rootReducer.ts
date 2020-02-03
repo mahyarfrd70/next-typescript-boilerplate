@@ -1,11 +1,11 @@
 import { combineReducers } from "redux";
-import Hello from "./hello/reducer";
-import { InitSateType } from "./hello/types";
+import Test from "./test/reducer";
+import { InitSateTest } from "./test/types";
 
 export interface State {
-    Hello: InitSateType;
+    Test: InitSateTest;
 }
 
 export default combineReducers<State>({
-    Hello
+    Test
 });

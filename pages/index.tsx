@@ -1,8 +1,8 @@
 import React from "react";
 import { NextPage } from "next";
-import Salam from "../src/components/salam";
+import Test from "../src/components/test";
 import { NextJSContext } from "next-redux-wrapper";
-import { changeFoo } from "../src/redux/hello/action";
+import { changeTest } from "../src/redux/test/action";
 import { useSelector } from "react-redux";
 import { RootState } from "customType";
 
@@ -10,15 +10,13 @@ interface Props {
     userAgent: string;
 }
 
-const Home: NextPage<Props> = (props: Props) => {
-    console.log("mahyar");
-    const counter: string = useSelector<RootState, string>(state => state.Hello.data);
-    debugger;
-    return <Salam kie={counter} ab={props.userAgent} />;
+const Home: NextPage<Props> = ({ userAgent }: Props) => {
+    const counter: string = useSelector<RootState, string>(state => state.Test.data);
+    return <Test test2={counter} test={userAgent} />;
 };
 
 Home.getInitialProps = ({ store, req }: NextJSContext): Props => {
-    store.dispatch<any>(changeFoo("ksdgfkjdshf"));
+    store.dispatch<any>(changeTest("init text"));
     const userAgent = req ? req.headers["user-agent"] : navigator.userAgent;
     return { userAgent };
 };

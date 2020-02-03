@@ -1,8 +1,8 @@
-import { FOO, GET } from "../actionTypes";
+import { TEST, GET } from "../actionTypes";
 
 //actions
 export interface SetFoo {
-    type: typeof FOO;
+    type: typeof TEST;
     data: string;
 }
 export interface GetFoo {
@@ -12,6 +12,6 @@ export interface GetFoo {
 export type Action = SetFoo | GetFoo;
 
 //reducer
-export interface InitSateType {
+export interface InitSateTest {
     data: string;
 }

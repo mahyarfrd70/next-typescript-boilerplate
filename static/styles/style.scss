@@ -2,10 +2,18 @@
 @import "./fonts";
 
 body{
-    direction: rtl;
     font-family: IRANSans;
+}
+
+h2{
+    color: rgb(77, 77, 77)
+}
+
+h5 {
+    color: rgb(104, 103, 103)
 }
 
 div{
     color: $red;
+    font-weight: bold;
 }
