@@ -17,7 +17,6 @@ const Salam: React.SFC<Props> = ({ ab = "hiiii", kie }: Props): JSX.Element => {
     const onClick = (): void => {
         dispatch(changeFoo("saladfhgdfgdfams"));
     };
-    debugger;
     return <div onClick={onClick}>{ab + salam.d + kie}سلام</div>;
 };
 
