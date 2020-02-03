@@ -4,14 +4,13 @@ import { mount } from "enzyme";
 import configureStore from "redux-mock-store";
 import thunk from "redux-thunk";
 import { Provider } from "react-redux";
-import Salam from "../src/components/salam";
 
 const middlewares = [thunk];
 const mockStore = configureStore(middlewares);
 
 describe("test next hello word", () => {
     const state = {
-        Hello: {
+        Test: {
             data: "alaki"
         }
     };
@@ -26,7 +25,12 @@ describe("test next hello word", () => {
     });
     it("test mount", () => {
         console.log(wrapper.debug());
-        expect(wrapper.find("Salam")).toBeDefined();
+        expect(wrapper.find("Test")).toBeDefined();
         console.log(store.getState(), store.getActions());
+        wrapper
+            .find("div")
+            .props()
+            .onClick();
+        console.log(store.getState(), store.getActions(), wrapper.debug());
     });
 });

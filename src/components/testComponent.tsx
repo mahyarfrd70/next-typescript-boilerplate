@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { changeTest } from "../redux/test/action";
+import { changeTest } from "@redux/test/action";
 
 interface Props {
     test: string;
@@ -12,6 +12,7 @@ const Test: React.SFC<Props> = ({ test = "chrome", test2 }: Props): JSX.Element 
     const onClick = (): void => {
         dispatch(changeTest("hello redux"));
     };
+
     return (
         <React.Fragment>
             <h2>{test2}</h2>

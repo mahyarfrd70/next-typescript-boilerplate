@@ -8,6 +8,7 @@ services:
             - ./src:/shop/src 
             - ./next.config.js:/shop/next.config.js 
             - ./server.js:/shop/server.js 
+            - ./types:/shop/types 
         ports: 
             - 3000:3000
         command: "npm run dev"

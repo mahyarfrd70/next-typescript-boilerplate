@@ -6,10 +6,10 @@ const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
-app.prepare()
-    .then(() => {
+async function crerateServer() {
+    try {
+        await app.prepare();
         const server = express();
-
         server.get("*", (req, res) => {
             if (req.path === "/service-worker.js") {
                 const filePath = path.join(__dirname, ".next", req.path);
@@ -19,13 +19,14 @@ app.prepare()
                 return handle(req, res);
             }
         });
-
         server.listen(port, err => {
             if (err) throw err;
             console.log(`> Ready on http://localhost:${port}`);
         });
-    })
-    .catch(ex => {
+    } catch (ex) {
         console.error(ex.stack);
         process.exit(1);
-    });
+    }
+}
+
+crerateServer();

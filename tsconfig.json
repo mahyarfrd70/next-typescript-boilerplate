@@ -14,15 +14,32 @@
         "sourceMap": true,
         "skipLibCheck": true,
         "baseUrl": ".",
-        "typeRoots": ["./node_modules/@types"],
+        "typeRoots": ["./node_modules/@types" ,"./types"],
         "lib": ["dom", "es2015", "es2016"],
         "strict": false,
         "forceConsistentCasingInFileNames": true,
         "noEmit": true,
         "esModuleInterop": true,
         "resolveJsonModule": true,
-        "isolatedModules": true
+        "isolatedModules": true,
+        "paths": {
+            "@components/*": [
+              "./src/components/*"
+            ],
+            "@layouts/*": [
+              "./src/layout/*"
+            ],
+            "@common/*": [
+                "./src/common/*"
+              ],
+            "@helpers/*": [
+              "./src/helpers/*"
+            ],
+            "@redux/*": [
+              "./src/redux/*"
+            ]
+          },
     },
     "exclude": ["node_modules", "**/*.spec.ts", "**/*.spec.tsx", "**/*.test.ts", "**/*.test.tsx"],
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "server/server.js"]
 }

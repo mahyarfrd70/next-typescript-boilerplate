@@ -1,4 +1,4 @@
-import { TEST, GET } from "../actionTypes";
+import { TEST, GET } from "@redux/actionTypes";
 
 //actions
 export interface SetFoo {

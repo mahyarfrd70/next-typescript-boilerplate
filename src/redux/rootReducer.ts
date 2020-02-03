@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import Test from "./test/reducer";
-import { InitSateTest } from "./test/types";
+import Test from "@redux/test/reducer";
+import { InitSateTest } from "@redux/test/types";
 
 export interface State {
     Test: InitSateTest;

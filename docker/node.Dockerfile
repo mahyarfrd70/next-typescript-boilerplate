@@ -6,7 +6,7 @@ RUN npm install
 COPY ./next.config.js ./
 COPY ./server.js ./
 COPY ./next-env.d.ts ./
-COPY ./customType.d.ts ./
+COPY ./types ./types
 COPY ./tsconfig.json ./
 COPY ./.babelrc ./
 CMD ["npm" , "run" , "dev"]

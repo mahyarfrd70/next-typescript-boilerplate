@@ -1,12 +1,11 @@
-import { TEST } from "../actionTypes";
-import { ThunkAction, ThunkDispatch } from "redux-thunk";
-import { Action } from "./types";
+import { TEST } from "@redux/actionTypes";
+import { ThunkAction } from "redux-thunk";
+import { Action } from "@redux/test/types";
 
 export type Actions = ThunkAction<void, {}, {}, Action>;
-type Dispatch = ThunkDispatch<{}, {}, Action>;
 
 export const changeTest = (test: string): Actions => {
-    return (dispatch: Dispatch): void => {
+    return dispatch => {
         dispatch({ type: TEST, data: test });
     };
 };

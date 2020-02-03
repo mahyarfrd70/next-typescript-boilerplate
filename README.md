@@ -88,6 +88,27 @@ for linting eslint in your editor follow these steps:
         // your code formated when save
         "editor.formatOnSave": true
     },
+    // for scss file
+    "[scss]": {
+        // set default formatter for editor
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        // your code formated when save
+        "editor.formatOnSave": true
+    },
+    // for html file
+    "[html]": {
+        // set default formatter for editor
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        // your code formated when save
+        "editor.formatOnSave": true
+    },
+    // for css file
+    "[css]": {
+        // set default formatter for editor
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        // your code formated when save
+        "editor.formatOnSave": true
+    },
     // validate eslint for these files
     "eslint.validate": [
         "javascript",

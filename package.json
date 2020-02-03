@@ -4,24 +4,60 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "node server.js",
-        "build": "eslint --fix --ext .tsx --ext .ts ./ && jest && next build",
-        "start": "NODE_ENV=production node server.js",
+        "dev": "nodemon server.js",
+        "build": "npm run lint:ts && npm run lint:scss && jest && rm -rf .next && next build",
+        "start": "NODE_ENV=production PORT=$PORT node ./server.js",
         "export": "next export",
-        "lint": "eslint --fix --ext .tsx --ext .ts ./",
-        "test": "jest --watchAll"
+        "prettier": "prettier --write **/*.{ts,tsx,js,jsx}",
+        "lint:ts": "npm run prettier && eslint -c .eslintrc --fix {pages,src}/**/*.{ts,tsx,js,jsx}",
+        "lint:scss": "stylelint --fix {src,pages}/**/*.scss",
+        "test": "NODE_ENV=test jest --watchAll"
     },
-    "keywords": [],
-    "author": "",
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged && npm run lint:types",
+            "pre-push": "npm run test",
+            "post-merge": "sh hooks/post-merge.sh",
+            "post-rewrite": "sh hooks/post-merge.sh"
+        }
+    },
+    "keywords": [
+        "nextjs",
+        "boilerplate",
+        "typeccript",
+        "react",
+        "redux",
+        "prettier",
+        "stylelint",
+        "jest",
+        "enzyme",
+        "husky",
+        "lint staged",
+        "docker",
+        "service worker",
+        "auth",
+        "axios"
+    ],
+    "author": "MahyarFard",
     "license": "ISC",
+    "lint-staged": {
+        "*.{ts,tsx}": [
+            "npm run lint:ts",
+            "git add"
+        ],
+        "*.scss": [
+            "npm run lint:scss",
+            "git add"
+        ]
+    },
     "dependencies": {
         "@zeit/next-sass": "^1.0.1",
         "axios": "^0.19.2",
         "express": "^4.17.1",
         "next": "^9.2.1",
+        "next-compose-plugins": "^2.2.0",
         "next-offline": "^4.0.6",
         "next-redux-wrapper": "^4.0.1",
-        "node-sass": "^4.13.1",
         "react": "^16.12.0",
         "react-dom": "^16.12.0",
         "react-redux": "^7.1.3",
@@ -29,7 +65,7 @@
         "redux-thunk": "^2.3.0"
     },
     "devDependencies": {
-        "@babel/core": "^7.8.3",
+        "@babel/core": "^7.8.4",
         "@babel/preset-env": "^7.8.3",
         "@babel/preset-react": "^7.8.3",
         "@babel/preset-typescript": "^7.8.3",
@@ -43,6 +79,7 @@
         "@typescript-eslint/eslint-plugin": "^2.17.0",
         "@typescript-eslint/parser": "^2.17.0",
         "babel-jest": "^25.1.0",
+        "babel-plugin-module-resolver": "^4.0.0",
         "enzyme": "^3.11.0",
         "enzyme-adapter-react-16": "^1.15.2",
         "enzyme-to-json": "^3.4.3",
@@ -50,10 +87,19 @@
         "eslint-config-prettier": "^6.9.0",
         "eslint-plugin-prettier": "^3.1.2",
         "eslint-plugin-react": "^7.18.0",
+        "husky": "^4.2.1",
         "jest": "^25.1.0",
+        "jest-svg-transformer": "^1.0.0",
+        "node-sass": "^4.13.1",
+        "nodemon": "^2.0.2",
+        "postcss-preset-env": "^6.7.0",
         "prettier": "^1.19.1",
         "redux-devtools-extension": "^2.13.8",
         "redux-mock-store": "^1.5.4",
+        "stylelint": "^13.0.0",
+        "stylelint-config-prettier": "^8.0.1",
+        "stylelint-config-recommended": "^3.0.0",
+        "stylelint-scss": "^3.14.2",
         "ts-jest": "^25.0.0",
         "typescript": "^3.7.5"
     }

@@ -1,10 +1,10 @@
 import React from "react";
 import { NextPage } from "next";
-import Test from "../src/components/test";
+import Test from "@components/testComponent";
 import { NextJSContext } from "next-redux-wrapper";
-import { changeTest } from "../src/redux/test/action";
+import { changeTest } from "@redux/test/action";
 import { useSelector } from "react-redux";
-import { RootState } from "customType";
+import { RootState } from "types";
 
 interface Props {
     userAgent: string;

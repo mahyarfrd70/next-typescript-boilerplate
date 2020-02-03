@@ -1,5 +1,5 @@
-import { TEST } from "../actionTypes";
-import { InitSateTest, Action } from "./types";
+import { TEST } from "@redux/actionTypes";
+import { InitSateTest, Action } from "@redux/test/types";
 
 const initState: InitSateTest = {
     data: ""

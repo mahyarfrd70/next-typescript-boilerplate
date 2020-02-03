@@ -1,0 +1,20 @@
+@import "./colors";
+@import "./fonts";
+
+body {
+    // direction: rtl;
+    font-family: IRANSans, Helvetica, Arial, Verdana, Tahoma, sans-serif;
+}
+
+h2 {
+    color: $gray;
+}
+
+h5 {
+    color: $black;
+}
+
+div {
+    color: $red;
+    // font-weight: bold;
+}
